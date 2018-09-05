@@ -5,6 +5,7 @@ Primeiros exercícios de Java
 Conceitos propostos:
 
 - Conhecer as ferramentas do ecossistema Java
+- Como executar um programa em Java
 - Tipos de dados
 - Estruturas condicionais
 - Estruturas de repetição

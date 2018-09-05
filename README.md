@@ -28,5 +28,21 @@ QUERO CAFEEEEEEEEEE
 
 ```
 
+### Exercício 02: Soma de dois inteiros
+
+Escreva a implementação do método `soma` da classe Somadora. 
+
+Tal método recebe dois números inteiros e deve retornar a soma deles:
+
+```java
+
+// Ao executar a linha abaixo:
+
+int resultado = Somadora.soma(1, 1);
+
+// O valor de resultado deve ser 2.
+
+```
+
 Após concluir, preencha o formulário de feedbacks [clicando
 aqui](https://docs.google.com/forms/d/e/1FAIpQLSfKYgYepw9weBvga-jLeyzrOmy_erFNQzqBbehU-ioQNmTbPw/viewform?usp=sf_link).

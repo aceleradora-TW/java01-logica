@@ -10,7 +10,7 @@ Conceitos propostos:
 - Estruturas condicionais
 - Estruturas de repetição
 
-## Tarefas propostas
+## Conhecendo as ferramentas
 
 
 ### Exercício 01: Importar o projeto no IntelliJ
@@ -25,6 +25,16 @@ O projeto será executado e então a seguinte mensagem deve ser mostrada na saí
 ******************************
 QUERO CAFEEEEEEEEEE
 ******************************
+
+```
+
+## Exercitando lógica de programação
+
+Nesta parte, escreveremos código. Apoie-se nos testes que criamos para validar que suas soluções resolvem os 
+exercícios corretamente. Para rodar os testes, execute o comando:
+
+```
+./gradlew test
 
 ```
 

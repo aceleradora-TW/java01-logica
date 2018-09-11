@@ -6,9 +6,9 @@ import static java.lang.Integer.parseInt;
 
 class ValorLuhn {
 
-    final int indice;
-    final int valor;
-    final int tamanhoNumero;
+    private final int indice;
+    private final int valor;
+    private final int tamanhoNumero;
 
     private ValorLuhn(int indice, int valor, int tamanhoNumero) {
         this.indice = indice;
@@ -16,7 +16,7 @@ class ValorLuhn {
         this.tamanhoNumero = tamanhoNumero;
     }
 
-    static IntFunction<ValorLuhn> paraValorLuhnIndexado(String[] fonte) {
+    static IntFunction<ValorLuhn> paraValorLuhn(String[] fonte) {
         return (indice) -> new ValorLuhn(indice, parseInt(fonte[indice]), fonte.length - 1);
     }
 

@@ -1,11 +1,16 @@
 package com.thoughtworks.aceleradora.agil.logica01.exercicio02;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class CalculadoraTest {
+
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void somaDoisNumerosInteiros() {
@@ -28,5 +33,13 @@ public class CalculadoraTest {
     public void divideDoisNumerosInteiros() {
         assertThat(Calculadora.divide(2, 2), equalTo(1));
         assertThat(Calculadora.divide(4, 2), equalTo(2));
+    }
+
+    @Test
+    public void naoDividePorZero() {
+        expectedException.expect(RuntimeException.class);
+        expectedException.expectMessage("Nao se pode dividir por zero");
+
+        Calculadora.divide(1, 0);
     }
 }

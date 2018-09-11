@@ -71,9 +71,4 @@ public class ValidadorCartaoDeCreditoTest {
     public void testDigitNineConvertedToOutputNine() {
         assertTrue(ValidadorCartaoDeCredito.ehValido("091"));
     }
-
-    @Test
-    public void testStringsWithNonDigitsInvalid() {
-        assertFalse(ValidadorCartaoDeCredito.ehValido(":9"));
-    }
 }

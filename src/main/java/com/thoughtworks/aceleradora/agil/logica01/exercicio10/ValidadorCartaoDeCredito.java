@@ -22,13 +22,10 @@ public class ValidadorCartaoDeCredito {
 
         String[] valores = semSujeira.split("");
 
-        return calculadoraLuhn
-                .calcula(valores)
-                .filter(ehDivisivelPorDez())
-                .isPresent();
+        return ehDivisivelPorDez(calculadoraLuhn.somaLuhn(valores));
     }
 
-    private static Predicate<Integer> ehDivisivelPorDez() {
-        return (resultado) -> resultado % 10 == 0;
+    private static boolean ehDivisivelPorDez(int valor) {
+        return valor % 10 == 0;
     }
 }

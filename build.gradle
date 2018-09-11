@@ -13,3 +13,9 @@ dependencies {
 repositories {
     jcenter()
 }
+
+task relatorio(type: Exec) {
+    commandLine 'xdg-open', 'build/reports/tests/test/index.html'
+}
+
+test.finalizedBy(relatorio)

@@ -1,17 +1,6 @@
 # java01-logica
 
-Primeiros exercícios de Java
-
-Conceitos propostos:
-
-- Conhecer as ferramentas do ecossistema Java
-- Como executar um programa em Java
-- Tipos de dados
-- Estruturas condicionais
-- Estruturas de repetição
-
-## Conhecendo as ferramentas
-
+Primeiro, vamos quebrar o gelo com o IntelliJ.
 
 ### Exercício 01: Importar o projeto no IntelliJ
 
@@ -30,8 +19,7 @@ QUERO CAFEEEEEEEEEE
 
 ## Exercitando lógica de programação
 
-Nesta parte, escreveremos código. Apoie-se nos testes que criamos para validar que suas soluções resolvem os 
-exercícios corretamente. Para rodar os testes, execute o comando:
+Nesta parte, escreveremos código. Se quiser, vocês podem se apoiar nos testes que criamos para validar que suas soluções resolvem os exercícios corretamente. Para rodar os testes, execute o comando:
 
 ```
 ./gradlew test

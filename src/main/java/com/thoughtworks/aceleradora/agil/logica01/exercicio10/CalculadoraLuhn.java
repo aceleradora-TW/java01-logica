@@ -10,7 +10,7 @@ public class CalculadoraLuhn {
     public Optional<Integer> calcula(String[] valores) {
         return range(0, valores.length)
                 .mapToObj(paraValorLuhnIndexado(valores))
-                .map(valorLuhn -> valorLuhn.paraInteiro(valores.length))
+                .map(ValorLuhn::paraInteiro)
                 .reduce(Integer::sum);
     }
 

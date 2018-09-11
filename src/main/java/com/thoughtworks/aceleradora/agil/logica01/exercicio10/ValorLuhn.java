@@ -8,18 +8,20 @@ class ValorLuhn {
 
     final int indice;
     final int valor;
+    final int tamanhoNumero;
 
-    private ValorLuhn(int indice, int valor) {
+    private ValorLuhn(int indice, int valor, int tamanhoNumero) {
         this.indice = indice;
         this.valor = valor;
+        this.tamanhoNumero = tamanhoNumero;
     }
 
     static IntFunction<ValorLuhn> paraValorLuhnIndexado(String[] fonte) {
-        return (indice) -> new ValorLuhn(indice, parseInt(fonte[indice]));
+        return (indice) -> new ValorLuhn(indice, parseInt(fonte[indice]), fonte.length - 1);
     }
 
-    public int paraInteiro(int tamanhoNumero) {
-        return ehIndiceLuhn(indice, tamanhoNumero - 1)
+    public int paraInteiro() {
+        return ehIndiceLuhn(indice, tamanhoNumero)
                 ? dobra(valor)
                 : valor;
     }

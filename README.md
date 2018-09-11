@@ -90,7 +90,56 @@ Utilize a classe `TesteFizzBuzz` para fazer os testes que você(s) achar(em) que
 correta implementação da solução.
 
 
-### Exercício 04: Validador de Cartão de Créditos
+### Exercicio 04: Invertendo Strings
+
+Crie uma classe com um método estático que inverta uma String. O método deve receber uma String por parâmetro e retornar
+o valor dessa String invertido. Para simplificar, o método deve ser __estático__. A assinatura, portanto, deve ser algo como o seguinte:
+
+```java
+public static String inverte(String original) {
+    // ... codigo
+}
+```
+
+Exemplos:
+
+- Ao enviar a string `java` para o método, este deve retornar `avaj`
+
+### Exercicio 05: Filtro de Voos
+
+A classe `FiltroDeVoos` possui uma lista de voos (objetos da classe `Voo`) como atributo e esta mesma classe possui métodos
+que permitem encontrar voos de certas caracteristicas dentro desta lista. A classe `Voo` possui três atributos:
+
+- Origem: código de três letras que representa o aeroporto de onde o voo está saindo
+- Destino: código de três letras que representa o aeroporto de destino do voo
+- Equipamento: modelo do avião que irá operar o voo
+- Duração: número inteiro que indica a duração do voo em minutos.
+
+O desafio proposto é implementar os três métodos propostos na classe `FiltroDeVoos`:
+
+__saindoDe__
+
+Este método recebe uma String por parâmetro e deve retornar uma lista com todos os voos cujo aeroporto de saída seja 
+igual a string recebida.
+
+__chegandoEm__
+
+Similar ao anterior, porém este método retorna todos os voos que tenham o aeroporto de destino igual a string recebida
+por parâmetro.
+
+__operadoPor__
+
+Retorna uma lista com todos os voos que são operados pelo equipamento (modelo do voo em formato String) recebido por 
+parâmetro.
+
+__Dicas:__
+
+Veja a implementação do método que filtra voos por duração para ter algumas ideias. 
+- Utilize os métodos `get` da classe `Voo`
+- Utilize laços de repetição se achar necessário
+- Utilize estruturas condicionais (if, else if, switch, etc.) se achar necessário
+
+### Exercício 10: Validador de Cartão de Créditos
 
 Dado um número, determine se é válido ou não pela fórmula de Luhn.
 

@@ -1,4 +1,4 @@
-package com.thoughtworks.aceleradora.agil.logica01.exercicio04;
+package com.thoughtworks.aceleradora.agil.logica01.exercicio10;
 
 import org.junit.Test;
 

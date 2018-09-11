@@ -14,8 +14,8 @@ public class CalculadoraTest {
 
     @Test
     public void subtraiDoisNumerosInteiros() {
-        assertThat(Calculadora.soma(1, 1), equalTo(0));
-        assertThat(Calculadora.soma(1, 2), equalTo(-1));
+        assertThat(Calculadora.subtrai(1, 1), equalTo(0));
+        assertThat(Calculadora.subtrai(1, 2), equalTo(-1));
     }
 
     @Test

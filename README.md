@@ -92,6 +92,72 @@ correta implementação da solução.
 
 ### Exercício 04: Validador de Cartão de Créditos
 
+Dado um número, determine se é válido ou não pela fórmula de Luhn.
+
+O algoritmo Luhn é uma fórmula de soma de verificação simples usada para validar uma variedade de números de identificação, como números de cartão de crédito e números de seguro social canadense.
+
+A tarefa é verificar se uma determinada string é válida.
+
+Strings de comprimento 1 ou menos não são válidas. Espaços são permitidos na entrada, mas devem ser removidos antes da verificação. Todos os outros caracteres não dígitos não são permitidos.
+
+__Exemplo 1: Número de cartão válido__
+
+```
+4539 1488 0343 6467
+```
+
+O primeiro passo do algoritmo Luhn é dobrar a cada segundo dígito, começando pela direita. No exemplo acima, 
+dobraremos os seguintes números:
+
+```
+
+4539 1488 0343 6467
+4_3_ 1_8_ 0_4_ 6_6_
+```
+
+Se o número dobrado resulta em um número maior que 9, subtraia 9 do resultado. 
+
+Aplicando a lógica de dobrar no exemplo acima, teremos o seguinte resultado:
+
+```
+8569 2478 0383 3437
+```
+
+Depois de dobrar os valores, some todos os digitos:
+
+```
+8+5+6+9+2+4+7+8+0+3+8+3+3+4+3+7 = 80
+```
+
+Se o resultado da soma é divisível por `10`, então o número do cartão é válido. 
+Nesse caso, nosso número é válido, pois `80` é divisível por `10`.
+
+__Exemplo 2: Número de cartão inválido__
+
+Dado o seguinte número de cartão de crédito:
+
+```
+8273 1232 7352 0569
+```
+
+Dobramos cada segundo dígito da direita para a esquerda (lembrando de subtrair 9 do resultado do 
+dobro caso este seja maior que 9):
+
+```
+7253 2262 5312 0539
+```
+
+Então somamos os dígitos:
+
+```
+7+2+5+3+2+2+6+2+5+3+1+2+0+5+3+9 = 57
+```
+
+`57` não é inteiramente divisível por `10`, portanto, este número de cartão é inválido.
+
+Fonte: [Exercism - Luhn - Community Solutions](https://exercism.io/tracks/java/exercises/luhn/solutions/15fc773616df4d46ae2e6439c37e2f21)
+
+
 ### Concluindo
 
 Após concluir, preencha o formulário de feedbacks [clicando

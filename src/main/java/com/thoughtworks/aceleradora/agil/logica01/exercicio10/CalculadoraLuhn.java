@@ -5,7 +5,7 @@ import static java.util.stream.IntStream.range;
 
 public class CalculadoraLuhn {
 
-    public int somaLuhn(String[] valores) {
+    public int soma(String[] valores) {
         return range(0, valores.length)
                 .mapToObj(paraValorLuhnIndexado(valores))
                 .mapToInt(ValorLuhn::paraInteiro)

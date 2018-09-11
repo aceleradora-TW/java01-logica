@@ -1,7 +1,5 @@
 package com.thoughtworks.aceleradora.agil.logica01.exercicio10;
 
-import java.util.function.Predicate;
-
 public class ValidadorCartaoDeCredito {
 
     public static boolean ehValido(String numero) {
@@ -22,7 +20,7 @@ public class ValidadorCartaoDeCredito {
 
         String[] valores = semSujeira.split("");
 
-        return ehDivisivelPorDez(calculadoraLuhn.somaLuhn(valores));
+        return ehDivisivelPorDez(calculadoraLuhn.soma(valores));
     }
 
     private static boolean ehDivisivelPorDez(int valor) {

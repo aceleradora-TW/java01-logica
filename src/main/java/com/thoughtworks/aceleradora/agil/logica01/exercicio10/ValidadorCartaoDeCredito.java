@@ -1,26 +1,26 @@
 package com.thoughtworks.aceleradora.agil.logica01.exercicio10;
 
-public class ValidadorCartaoDeCredito {
+class ValidadorCartaoDeCredito {
 
-    public static boolean ehValido(String numero) {
+    private static final String NAO_NUMERICOS = ".*[\\D].*";
 
-        String semEspacos = numero.replaceAll(" ", "");
+    static boolean ehValido(final String numeroCompleto) {
 
-        String semSujeira = semEspacos.replaceAll("[^\\d]", "");
+        String valorSemEspacos = numeroCompleto.replaceAll(" ", "");
 
-        if (semEspacos.length() != semSujeira.length()) {
-            return false;
-        }
-
-        if (semSujeira.length() <= 1) {
+        if (!ehProcessavel(valorSemEspacos)) {
             return false;
         }
 
         CalculadoraLuhn calculadoraLuhn = new CalculadoraLuhn();
 
-        String[] valores = semSujeira.split("");
+        String[] valores = valorSemEspacos.split("");
 
         return ehDivisivelPorDez(calculadoraLuhn.soma(valores));
+    }
+
+    private static boolean ehProcessavel(final String valorSemEspaco) {
+        return (!valorSemEspaco.matches(NAO_NUMERICOS)) && valorSemEspaco.length() > 1;
     }
 
     private static boolean ehDivisivelPorDez(int valor) {

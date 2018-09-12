@@ -20,22 +20,22 @@ class ValorLuhn {
         return (indice) -> new ValorLuhn(indice, parseInt(fonte[indice]), fonte.length - 1);
     }
 
-    public int paraInteiro() {
-        return ehIndiceLuhn(indice, tamanhoNumero)
-                ? dobra(valor)
+    int paraInteiro() {
+        return ehIndiceLuhn()
+                ? valorDobrado()
                 : valor;
     }
 
-    private int dobra(int valor) {
+    private int valorDobrado() {
         return valor * 2 > 9
                 ? valor * 2 - 9
                 : valor * 2;
     }
 
-    private boolean ehIndiceLuhn(int indiceAtual, int tamanhoNumero) {
+    private boolean ehIndiceLuhn() {
         return ehPar(tamanhoNumero)
-                ? ehImpar(indiceAtual)
-                : ehPar(indiceAtual);
+                ? ehImpar(indice)
+                : ehPar(indice);
     }
 
     private boolean ehPar(int valor) {
